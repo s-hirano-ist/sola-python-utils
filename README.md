@@ -66,3 +66,5 @@ poetry lock
 pyenv + poetry
 
 > https://dev.classmethod.jp/articles/pyenv-and-poetry/
+>
+> https://zenn.dev/tk_resilie/articles/python_my_best_project

@@ -1,5 +1,6 @@
 {
     "cSpell.words": [
+        "isort",
         "mypy",
         "pydantic",
         "pyenv"
