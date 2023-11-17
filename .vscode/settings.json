@@ -6,6 +6,8 @@
         "isort",
         "mypy",
         "pydantic",
-        "pyenv"
+        "pyenv",
+        "pypi",
+        "testpypi"
     ]
 }
