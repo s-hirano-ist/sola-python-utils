@@ -1,5 +1,3 @@
-# .PHONYで定義することで、タスクランナーを簡単に定義できます
-
 # install
 .PHONY: install
 install:
