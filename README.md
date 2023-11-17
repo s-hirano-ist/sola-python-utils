@@ -68,3 +68,9 @@ pyenv + poetry
 > https://dev.classmethod.jp/articles/pyenv-and-poetry/
 >
 > https://zenn.dev/tk_resilie/articles/python_my_best_project
+
+### requirements.txtでgitlab上のライブラリを参照
+
+```txt
+git+https://oauth2:SECRET_KEY@gitlab.com/REPOSITORY_URL
+```

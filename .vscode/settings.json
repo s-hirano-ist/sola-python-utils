@@ -1,5 +1,7 @@
 {
     "cSpell.words": [
+        "autofix",
+        "autoupdate",
         "isort",
         "mypy",
         "pydantic",
