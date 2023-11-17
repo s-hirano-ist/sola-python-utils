@@ -4,7 +4,8 @@
     "no-bare-urls": false, // MD034 URLのリンク化条件
     "no-duplicate-header": false,
     "no-inline-html": false,
-    "first-line-heading": false
+    "first-line-heading": false,
+    "ol-prefix": false // MD029 番号付きリストの接頭辞
   },
   "ignores": [".git", "node_modules"] // 無視するディレクトリ
 }
