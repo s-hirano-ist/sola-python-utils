@@ -5,6 +5,7 @@
         "dotenv",
         "isort",
         "mypy",
+        "pdoc",
         "pydantic",
         "pyenv",
         "pypi",

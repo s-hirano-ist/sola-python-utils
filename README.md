@@ -2,6 +2,12 @@
 
 ## 使い方
 
+### Generate documents from source code
+
+```bash
+poetry run pdoc -o docs sola_python_utils
+```
+
 ### Pyenv
 
 ```bash
