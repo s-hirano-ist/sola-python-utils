@@ -8,6 +8,7 @@
         "pydantic",
         "pyenv",
         "pypi",
+        "setrecursionlimit",
         "testpypi"
     ]
 }
