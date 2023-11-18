@@ -1,3 +1,6 @@
+"""
+Line notification function.
+"""
 import os
 
 import requests
@@ -7,6 +10,7 @@ load_dotenv()
 
 
 def notify(message: str) -> None:
+    """Must set the following environment variables: LINE_NOTIFY_URL LINE_NOTIFY_SECRET_TOKEN at .env file."""
     url = os.environ["LINE_NOTIFY_URL"]
     token = os.environ["LINE_NOTIFY_SECRET_TOKEN"]
     headers = {"Authorization": "Bearer " + token}

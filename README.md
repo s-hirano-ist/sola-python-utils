@@ -2,6 +2,12 @@
 
 ## 使い方
 
+### Generate documents from source code
+
+```bash
+poetry run pdoc -o docs sola_python_utils
+```
+
 ### Pyenv
 
 ```bash
@@ -83,8 +89,8 @@ poetry config repositories.testpypi https://test.pypi.org/legacy/ #TestPyPI
 7. publish
 
 ```bash
-poetry publish -r testpypi #TestPyPI
-poetry publish #PyPI
+poetry --build publish -r testpypi #TestPyPI
+poetry --build publish #PyPI
 ```
 
 ## Reference
