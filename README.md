@@ -89,8 +89,8 @@ poetry config repositories.testpypi https://test.pypi.org/legacy/ #TestPyPI
 7. publish
 
 ```bash
-poetry publish -r testpypi #TestPyPI
-poetry publish #PyPI
+poetry --build publish -r testpypi #TestPyPI
+poetry --build publish #PyPI
 ```
 
 ## Reference
