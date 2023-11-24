@@ -3,17 +3,17 @@ import sys
 sys.setrecursionlimit(500000)
 
 
-def readInt() -> any:
+def readInt() -> int:
     return int(sys.stdin.readline().rstrip())
 
 
-def readIntLine() -> any:
+def readIntLine() -> list[int]:
     return list(map(int, sys.stdin.readline().rstrip().split()))
 
 
-def readString() -> any:
+def readString() -> str:
     return sys.stdin.readline().rstrip()
 
 
-def readStringLine() -> any:
+def readStringLine() -> list[str]:
     return list(sys.stdin.readline().rstrip().split())

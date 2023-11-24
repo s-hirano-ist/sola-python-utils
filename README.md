@@ -8,6 +8,12 @@
 poetry run pdoc -o docs sola_python_utils
 ```
 
+### pre-commit manually
+
+```bash
+poetry run pre-commit run --files sola_python_utils/**/*
+```
+
 ### Pyenv
 
 ```bash
