@@ -60,7 +60,7 @@
 </span><span id="L-4"><a href="#L-4"><span class="linenos"> 4</span></a><span class="kn">from</span> <span class="nn">.line_notify</span> <span class="kn">import</span> <span class="n">notify</span>
 </span><span id="L-5"><a href="#L-5"><span class="linenos"> 5</span></a>
 </span><span id="L-6"><a href="#L-6"><span class="linenos"> 6</span></a>
-</span><span id="L-7"><a href="#L-7"><span class="linenos"> 7</span></a><span class="k">def</span> <span class="nf">memory_usage</span><span class="p">():</span>
+</span><span id="L-7"><a href="#L-7"><span class="linenos"> 7</span></a><span class="k">def</span> <span class="nf">memory_usage</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 </span><span id="L-8"><a href="#L-8"><span class="linenos"> 8</span></a>    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
 </span><span id="L-9"><a href="#L-9"><span class="linenos"> 9</span></a>        <span class="n">args</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;free&quot;</span><span class="p">,</span> <span class="s2">&quot;-g&quot;</span><span class="p">]</span>
 </span><span id="L-10"><a href="#L-10"><span class="linenos">10</span></a>        <span class="n">res</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">check_output</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
@@ -78,13 +78,13 @@
 <div class="attr function">
             
         <span class="def">def</span>
-        <span class="name">memory_usage</span><span class="signature pdoc-code condensed">(<span class="return-annotation">):</span></span>
+        <span class="name">memory_usage</span><span class="signature pdoc-code condensed">(<span class="return-annotation">) -> <span class="kc">None</span>:</span></span>
 
                 <label class="view-source-button" for="memory_usage-view-source"><span>View Source</span></label>
 
     </div>
     <a class="headerlink" href="#memory_usage"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="memory_usage-8"><a href="#memory_usage-8"><span class="linenos"> 8</span></a><span class="k">def</span> <span class="nf">memory_usage</span><span class="p">():</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="memory_usage-8"><a href="#memory_usage-8"><span class="linenos"> 8</span></a><span class="k">def</span> <span class="nf">memory_usage</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 </span><span id="memory_usage-9"><a href="#memory_usage-9"><span class="linenos"> 9</span></a>    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
 </span><span id="memory_usage-10"><a href="#memory_usage-10"><span class="linenos">10</span></a>        <span class="n">args</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;free&quot;</span><span class="p">,</span> <span class="s2">&quot;-g&quot;</span><span class="p">]</span>
 </span><span id="memory_usage-11"><a href="#memory_usage-11"><span class="linenos">11</span></a>        <span class="n">res</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">check_output</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>

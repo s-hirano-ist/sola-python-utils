@@ -1,9 +1,9 @@
 [tool.poetry]
 name = "sola-python-utils"
-version = "0.1.1"
+version = "0.1.2"
 description = "python utils for s-hirano-ist"
-authors = ["s-hirano-ist <solucky0725@icloud.com>"]
-homepage = "https://s-hirano.com"
+authors = ["s-hirano-ist <s-hirano-ist@outlook.com>"]
+homepage = "https://github.com/s-hirano-ist/sola-python-utils#readme"
 repository = "https://github.com/s-hirano-ist/sola-python-utils"
 readme = "README.md"
 

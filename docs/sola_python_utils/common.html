@@ -29,11 +29,18 @@
 
             <h2>Submodules</h2>
             <ul>
-                    <li><a href="common/line_notify.html">line_notify</a></li>
                     <li><a href="common/memory_usage.html">memory_usage</a></li>
-                    <li><a href="common/system_command.html">system_command</a></li>
-                    <li><a href="common/template.html">template</a></li>
             </ul>
+
+            <h2>API Documentation</h2>
+                <ul class="memberlist">
+            <li>
+                    <a class="function" href="#notify">notify</a>
+            </li>
+            <li>
+                    <a class="function" href="#memory_usage">memory_usage</a>
+            </li>
+    </ul>
 
 
 
@@ -54,12 +61,65 @@
 
                         <label class="view-source-button" for="mod-common-view-source"><span>View Source</span></label>
 
-                        <div class="pdoc-code codehilite"><pre><span></span><span id="L-1"><a href="#L-1"><span class="linenos">1</span></a><span class="kn">from</span> <span class="nn">.line_notify</span> <span class="kn">import</span> <span class="o">*</span>
-</span><span id="L-2"><a href="#L-2"><span class="linenos">2</span></a><span class="kn">from</span> <span class="nn">.memory_usage</span> <span class="kn">import</span> <span class="o">*</span>
+                        <div class="pdoc-code codehilite"><pre><span></span><span id="L-1"><a href="#L-1"><span class="linenos">1</span></a><span class="kn">from</span> <span class="nn">.line_notify</span> <span class="kn">import</span> <span class="n">notify</span>
+</span><span id="L-2"><a href="#L-2"><span class="linenos">2</span></a><span class="kn">from</span> <span class="nn">.memory_usage</span> <span class="kn">import</span> <span class="n">memory_usage</span>
+</span><span id="L-3"><a href="#L-3"><span class="linenos">3</span></a>
+</span><span id="L-4"><a href="#L-4"><span class="linenos">4</span></a><span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;notify&quot;</span><span class="p">,</span> <span class="s2">&quot;memory_usage&quot;</span><span class="p">]</span>
 </span></pre></div>
 
 
             </section>
+                <section id="notify">
+                            <input id="notify-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
+<div class="attr function">
+            
+        <span class="def">def</span>
+        <span class="name">notify</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">message</span><span class="p">:</span> <span class="nb">str</span></span><span class="return-annotation">) -> <span class="kc">None</span>:</span></span>
+
+                <label class="view-source-button" for="notify-view-source"><span>View Source</span></label>
+
+    </div>
+    <a class="headerlink" href="#notify"></a>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="notify-13"><a href="#notify-13"><span class="linenos">13</span></a><span class="k">def</span> <span class="nf">notify</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="notify-14"><a href="#notify-14"><span class="linenos">14</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Must set the following environment variables: LINE_NOTIFY_URL LINE_NOTIFY_SECRET_TOKEN at .env file.&quot;&quot;&quot;</span>
+</span><span id="notify-15"><a href="#notify-15"><span class="linenos">15</span></a>    <span class="n">url</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;LINE_NOTIFY_URL&quot;</span><span class="p">]</span>
+</span><span id="notify-16"><a href="#notify-16"><span class="linenos">16</span></a>    <span class="n">token</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;LINE_NOTIFY_SECRET_TOKEN&quot;</span><span class="p">]</span>
+</span><span id="notify-17"><a href="#notify-17"><span class="linenos">17</span></a>    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Authorization&quot;</span><span class="p">:</span> <span class="s2">&quot;Bearer &quot;</span> <span class="o">+</span> <span class="n">token</span><span class="p">}</span>
+</span><span id="notify-18"><a href="#notify-18"><span class="linenos">18</span></a>    <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="n">message</span><span class="p">})</span>
+</span></pre></div>
+
+
+            <div class="docstring"><p>Must set the following environment variables: LINE_NOTIFY_URL LINE_NOTIFY_SECRET_TOKEN at .env file.</p>
+</div>
+
+
+                </section>
+                <section id="memory_usage">
+                            <input id="memory_usage-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
+<div class="attr function">
+            
+        <span class="def">def</span>
+        <span class="name">memory_usage</span><span class="signature pdoc-code condensed">(<span class="return-annotation">) -> <span class="kc">None</span>:</span></span>
+
+                <label class="view-source-button" for="memory_usage-view-source"><span>View Source</span></label>
+
+    </div>
+    <a class="headerlink" href="#memory_usage"></a>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="memory_usage-8"><a href="#memory_usage-8"><span class="linenos"> 8</span></a><span class="k">def</span> <span class="nf">memory_usage</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="memory_usage-9"><a href="#memory_usage-9"><span class="linenos"> 9</span></a>    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span><span id="memory_usage-10"><a href="#memory_usage-10"><span class="linenos">10</span></a>        <span class="n">args</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;free&quot;</span><span class="p">,</span> <span class="s2">&quot;-g&quot;</span><span class="p">]</span>
+</span><span id="memory_usage-11"><a href="#memory_usage-11"><span class="linenos">11</span></a>        <span class="n">res</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">check_output</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+</span><span id="memory_usage-12"><a href="#memory_usage-12"><span class="linenos">12</span></a>        <span class="n">conv</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+</span><span id="memory_usage-13"><a href="#memory_usage-13"><span class="linenos">13</span></a>        <span class="n">string</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">conv</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">conv</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">conv</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">conv</span><span class="p">[</span><span class="mi">8</span><span class="p">])</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nb">int</span><span class="p">(</span><span class="n">conv</span><span class="p">[</span><span class="mi">7</span><span class="p">])</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="si">}</span><span class="s2">%&quot;</span>
+</span><span id="memory_usage-14"><a href="#memory_usage-14"><span class="linenos">14</span></a>        <span class="nb">print</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+</span><span id="memory_usage-15"><a href="#memory_usage-15"><span class="linenos">15</span></a>        <span class="n">notify</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+</span><span id="memory_usage-16"><a href="#memory_usage-16"><span class="linenos">16</span></a>        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</span></pre></div>
+
+
+    
+
+                </section>
     </main>
 <script>
     function escapeHTML(html) {
